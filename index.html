@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HOSTED -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+
+    <!-- LOCAL -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- HOSTED -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+
+    <!-- LOCAL --> 
+    <script src="modal.js"></script>
+
+  </head>
+  <body>
+    <div class="overflow-wrap">
+      <div class="modal-wrap flex">
+        <div class="mask"></div>
+        <div class="modal" id="modal">
+          <div class="carousel-wrap">
+            <div class="window">
+              <div id="carousel">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+              </div>
+              <i class="mdi mdi-chevron-left" id="prev"></i>
+              <i class="mdi mdi-chevron-right" id="next"></i>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="title"></div>
+            <div class="tag"></div>
+            <div class="detail"></div>
+            <a href="#" target="_blank"
+              ><div class="button">
+                <i class="mdi mdi-open-in-new"></i>VIEW SITE
+              </div></a
+            >
+          </div>
+          <i class="close mdi mdi-close"></i>
+        </div>
+      </div>
+
+      <section id="home" class=" section home flex height-fix">
+        <video data-keepplaying class="my-video"  autoplay muted loop> <source src="media/video compressed.mp4" type="video/mp4" ></video>
+        <div class="flex overlay">
+          <div class="text">
+            Hello, I'm <span class="highlight">Igor Sivevski</span>.
+            <br />
+            I'm a front end web developer.
+          </div>
+
+          <div class="button page-link" dest="portfolio">
+            View my work <i class="mdi mdi-arrow-right"></i>
+          </div>
+
+          <nav class="flex">
+            <div class="link-wrap">
+              <div class="active page-link" dest="home">home</div>
+              <div class="page-link" dest="about">about</div>
+              <div class="page-link" dest="portfolio">portfolio</div>
+              <div class="page-link" dest="contact">contact</div>
+            </div>
+            <i class="mdi mdi-menu"></i>
+          </nav>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            ABOUT
+          </div>
+          <div class="header-bar waypoint"data-animation="slide-in-left"data-delay=".5s"></div>
+          <div class="skills-wrapper flex row-gt-sm">
+            <div class="flex flex-50-gt-sm waypoint"data-animation="slide-in-left">
+              <img src="media/img/me.jpg" class="me" />
+              
+              <div class="label bold">Who's this guy?</div>
+              <div>
+                I'm a Front-End Developer based in Bitola,Macedonia.
+                <br />
+                I have serious passion for UI effects, animations and creating
+                intuitive, dynamic user experiences.
+                <br />
+                <span class="page-link highlight" dest="contact">Let's make something special.</span>
+              </div>
+            </div>
+            <div class="flex flex-50-gt-sm waypoint bars-wrap" data-animation="slide-in-right" >
+              <div class="bar flex">
+                <div class="bar fill" style="width:90%">
+                  <div class="tag bold flex">HTML</div>
+                </div>
+                <span>90%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width:80%">
+                  <div class="tag bold flex">CSS</div>
+                </div>
+                <span>80%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width:65%">
+                  <div class="tag bold flex">JavaScript</div>
+                </div>
+                <span>65%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width:60%">
+                  <div class="tag bold flex">Wordpress</div>
+                </div>
+                <span>60%</span>
+              </div>
+              <div class="languages">
+              <div class="bar flex ">
+                <div class="bar fill lang" style="width:95%">
+                  <div class="tag bold flex light ">English</div>
+                </div>
+                <span>95%</span>
+              </div>
+              <div class="bar flex ">
+                <div class="bar fill lang" style="width:80%">
+                  <div class="tag bold flex light ">German</div>
+                </div>
+                <span>80%</span>
+              </div>
+              <div class="bar flex ">
+                <div class="bar fill lang" style="width:75%">
+                  <div class="tag bold flex light ">French</div>
+                </div>
+                <span>75%</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class=" section flex" id="portfolio">
+        <div class="header waypoint" data-animation="slide-in-right">
+          PROJECTS
+        </div>
+        <div
+          class="header-bar waypoint"
+          data-animation="slide-in-right"
+          data-delay=".3s"
+        ></div>
+
+        <div class="filter-wrap waypoint" data-animation="fade-in">
+          <div class="flex row">
+            <div class="filter" data-filter="all">ALL</div>
+           <div class="filter" data-filter=".wp">WORDPRESS</div>
+          </div>
+          <div class="float-bar">
+            <div class="flex row">
+              <div class="filter" data-filter="all">ALL</div>
+                <div class="filter" data-filter=".wp">WORDPRESS</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="gallery" class="container flex row wrap waypoint">
+        
+          <div class="mix wp" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Cyclist blog</div>
+                <span class="highlight">Wordpress</span>
+              </div>
+              <div class="button" id="bike">LEARN MORE</div>
+            </div>
+          </div>
+        
+          <div class="mix" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Basket Organic</div>
+                <span class="highlight">Bootstrap /Angular Js</span>
+              </div>
+              <div class="button" id="basket">LEARN MORE</div>
+            </div>
+          </div>
+          <div class="mix wp" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Astoria Transport</div>
+                <span class="highlight">Wordpress</span>
+              </div>
+              <div class="button" id="astoria">LEARN MORE</div>
+            </div>
+          </div>
+          <div class="mix" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">GSA</div>
+                <span class="highlight">Bootstrap</span>
+              </div>
+              <div class="button" id="gsa">LEARN MORE</div>
+            </div>
+          </div>
+          <div class="mix" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Looplab</div>
+                <span class="highlight">Bootstrap</span>
+              </div>
+              <div class="button" id="looplab">LEARN MORE</div>
+            </div>
+          </div>
+          <div class="mix wp" data-my-order="1">
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">ComprasYventas</div>
+                <span class="highlight">Wordpress</span>
+              </div>
+              <div class="button" id="compras">LEARN MORE</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section id="blog">
+        
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <svg
+          preserveAspectRatio="none"
+          viewBox="0 0 100 102"
+          height="75"
+          width="100%"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="svgcolor-light"
+        >
+          <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+        </svg>
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            CONTACT
+          </div>
+          <div class="header-bar waypoint"data-animation="slide-in-right" data-delay=".25s"></div>
+          <div class="highlight waypoint"data-animation="slide-in-right"data-delay=".5s">
+            Have a question or want to work together?
+          </div>
+          <form class="waypoint"data-animation="pop-in" data-delay=".5s" id="contact-form">
+            <input placeholder="Name" type="text" name="name" required />
+            <input placeholder="Enter email" type="email"name="email"required/>
+            <textarea placeholder="Your Message"type="text"name="message"></textarea>
+            <div id="success">
+              <div>
+                Your message was sent successfully. Thanks!<span id="close"class="mdi mdi-close"></span>
+              </div>
+            </div>
+            <input class="button" type="submit" id="submit" value="SUBMIT" />
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
+
+        <div class="icon-wrap flex row">
+          <a href="https://www.linkedin.com/in/igor-sivevski-60070a1b">
+            <div class="flex icon" id="icon-2">
+              <i class="mdi mdi-linkedin"></i>
+            </div>
+          </a>
+          <a href="https://https://www.facebook.com/igor.sivevski.7">
+            <div class="flex icon" id="icon-3">
+              <i class="mdi mdi-facebook"></i>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/i.sivevski/">
+            <div class="flex icon" id="icon-4">
+              <i class="mdi mdi-instagram"></i>
+            </div>
+          </a>
+        </div>
+        <div class="info-box">
+          <div class="footnote">
+            IGOR SIVEVSKI <span class="highlight">&copy;2022</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="preload">
+      <img src="/media/img/me.jpg" />
+      <img src="img/filler.jpg" />
+      <img src="media/img/thumb-1.png" />
+      <img src="media/img/thumb-2.jpg" />
+      <img src="media/img/thumb-3.jpg" />
+      <img src="media/img/thumb-4.jpg" />
+      <img src="media/img/thumb-5.jpg" />
+      <img src="media/img/thumb-6.jpg" />
+      <img src="media/img/slides/compras-0.jpg" />
+      <img src="media/img/slides/compras-1.jpg"  />
+      <img src="media/img/slides/compras-2.jpg" />
+      <img src="media/img/slides/gas-0.jpg"  />
+      <img src="media/img/slides/gsa-1.jpg"/>
+      <img src="media/img/slides/gas-2.jpg" />
+      <img src="media/img/slides/astoria-0.jpg" />
+      <img src="media/img/slides/astoria-1.jpg" />
+      <img src="media/img/slides/astoria-2.jpg" />
+      <img src="media/img/slides/bike-0.jpg"/>
+      <img src="media/img/slides/bike-1.jpg" />
+      <img src="media/img/slides/bike-2.jpg" />
+      <img src="media/img/slides/looplab-0.jpg" />
+      <img src="media/img/slides/looplab-1.jpg" />
+      <img src="media/img/slides/looplab-2.jpg" />
+      <img src="media/img/slides/basket-0.jpg" />
+      <img src="media/img/slides/basket-1.jpg" />
+      <img src="media/img/slides/basket-2.jpg" />
+  
+    </div>
+    </div>
+  <script src="index.js"></script>
+  </body>
+</html>
+
